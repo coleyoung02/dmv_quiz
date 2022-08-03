@@ -6,7 +6,6 @@ import java.util.Scanner;
 import org.json.*;
 
 
-
 public class Parser {
 	
 	private static String readFile(String filename) {
@@ -26,13 +25,26 @@ public class Parser {
 		return returnString;
 	}
 	
+	public static Question makeQuestion(JSONObject j) {
+		
+		
+		JSONArray answerArr = j.getJSONArray("answers");
+		int k = answerArr.length();
+		String text = j.getString("question");
+		String[] answers = new String[k];
+		
+		for (int i = 0; i < k; i++) {
+			answers[i] = answerArr.getString(i);
+		}
+		Question q = new Question(text, answers);
+		return q;
+	}
 	
 	public static Question[] parse(String filename) {
 		JSONArray arr = new JSONArray(readFile(filename));
 		Question[] qArr = new Question[arr.length()];
 		for (int i = 0; i < arr.length(); i++) {
-			
-			qArr[i] = new Question();
+			qArr[i] = makeQuestion(arr.getJSONObject(i));
 		}
 		return qArr;
 	}

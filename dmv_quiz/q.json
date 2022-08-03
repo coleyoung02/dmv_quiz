@@ -1,14 +1,274 @@
 [
 	{
-		"question":"this is the first test question"
-		"answers" : [
-			"correct" , "wrong1", "wrong2"
+		"question":"What can happen if an unlicensed driver operates your car?",
+		"answers" : [	
+			"It may be impounded for up to 30 days", 
+			"Both parties may be fined up to $500", 
+			"Eternity in hell"
 		]
 	},
 	{
-		"question":"this is the second test question"
+		"question":"You may drive off of the paved roadway to pass another vehicle:",
+		"answers" : [	
+			"Under no circumstances", 
+			"If the shoulder is wide enough to accommodate your vehicle", 
+			"If the vehicle ahead of you is turning left"
+		]
+	},
+	{
+		"question":"You are approaching a railroad crossing with no warning devices and are unable \nto see 400 feet down the tracks in one direction. The speed limit is:",
+		"answers" : [	
+			"15 mph", 
+			"20 mph", 
+			"30 mph"
+		]
+	},
+	{
+		"question":"When parking your vehicle parallel to the curb on a level street:",
+		"answers" : [	
+			"Your wheels must be within 18 inches of the curb", 
+			"Your front wheels must be turned toward the street", 
+			"One of your rear wheels must touch the curb"
+		]
+	},
+	{
+		"question":"When you are merging onto the freeway, you should be driving:",
+		"answers" : [	
+			"At or near the same speed as the traffic on the freeway.", 
+			"5 to 10 MPH slower than the traffic on the freeway", 
+			"The posted speed limit for traffic on the freeway"
+		]
+	},
+	{
+		"question":"When driving in fog, you should use your:",
+		"answers" : [	
+			"Low beams", 
+			"Fog lights only", 
+			"High beams"
+		]
+	},
+	{
+		"question":"A white painted curb means:",
+		"answers" : [	
+			"Loading zone for passengers or mail only", 
+			"Loading zone for freight or passengers", 
+			"Loading zone for freight only"
+		]
+	},
+	{
+		"question":"A school bus ahead of you in your lane is \nstopped with red lights flashing. You should:",
+		"answers" : [	
+			"Stop as long as the red lights are flashing", 
+			"Stop, then proceed when you think all of the children have exited the bus", 
+			"Slow to 25 MPH and pass cautiously"
+		]
+	},
+	{
+		"question":"California's 'Basic Speed Law' says:",
+		"answers" : [	
+			"You should never drive faster than is safe for current conditions.",
+			"You should never drive faster than posted speed limits.", 
+			"The maximum speed limit in California is 70 mph on certain freeways."
+		]
+	},
+	{
+		"question":"You just sold your vehicle. You must notify the DMV within ___ days.",
+		"answers" : [	
+			"5", 
+			"10", 
+			"15"
+		]
+	},
+	{
+		"question":"10. To avoid last minute moves, you should be looking down \nthe road to where your vehicle will be in about ______________.",
+		"answers" : [	
+			"10 to 15 seconds", 
+			"5 to 10 seconds", 
+			"15 to 20 seconds"
+		]
+	},
+	{
+		"question":"You are about to make a left turn. You must signal \ncontinuously during the last ____ feet before the turn.",
+		"answers" : [	
+			"100", 
+			"75", 
+			"50"
+		]
+	},
+	{
+		"question":"Which of the following statements about blind spots is true?",
+		"answers" : [	
+			"Large trucks have bigger blind spots than most passenger vehicles.", 
+			"They are eliminated if you have one outside mirror on each side of the vehicle.", 
+			"Blind spots can be checked by looking in your rear view mirrors."
+		]
+	},
+	{
+		"question":"You have been involved in a minor traffic collision \nwith a parked vehicle and you can't find the owner. You must:",
+		"answers" : [	
+			"Both of the above.", 
+			"Leave a note on the vehicle.", 
+			"Report the accident without delay to the city police or, in unincorporated areas, to the CHP."
+		]
+	},
+	{
+		"question":"Unless otherwise posted the speed limit in a residential area is ____.",
+		"answers" : [	
+			"25 mph", 
+			"20 mph", 
+			"30 mph"
+		]
+	},
+	{
+		"question":"You may legally block an intersection:",
+		"answers" : [	
+			"Under no circumstances.", 
+			"When you entered the intersection on the green light.", 
+			"During rush hour traffic."
+		]
+	},
+	{
+		"question":"When parking uphill on a two-way street with no curb, your front wheels should be:",
+		"answers" : [	
+			"Turned to the right (away from the street).", 
+			"Turned to the left (toward the street).", 
+			"Parallel with the pavement."
+		]
+	},
+	{
+		"question":"With a Class C drivers license a person may drive:",
+		"answers" : [	
+			"A 3-axle vehicle if the Gross Vehicle Weight is less than 6,000 pounds.", 
+			"Any 3-axle vehicle regardless of the weight.", 
+			"A vehicle pulling two trailers."
+		]
+	},
+	{
+		"question":"To turn left from a multilane one-way street onto \na one-way street, you should start your turn from:",
+		"answers" : [	
+			"The lane closest to the left curb.", 
+			"Any lane (as long as it is safe).", 
+			"The lane in the center of the road."
+		]
+	},
+	{
+		"question":" If you are involved in a traffic collision, you are \nrequired to complete and submit a written report (SR1) to the DMV:",
+		"answers" : [	
+			"If there is property damage in excess of $1,000 or if there are any injuries.", 
+			"Only if you or the other driver is injured.", 
+			"Only if you are at fault."
+		]
+	},
+	{
+		"question":"Roadways are the most slippery:",
+		"answers" : [	
+			"The first rain after a dry spell.", 
+			"During a heavy downpour.", 
+			"After it has been raining for awhile."
+		]
+	},
+	{
+		"question":"You may not park your vehicle:",
+		"answers" : [	
+			"Next to a red painted curb.", 
+			"On the side of the freeway in an emergency.", 
+			"Within 100 feet of an elementary school."
+		]
+	},
+	{
+		"question":"You must notify the DMV within 5 days if you:",
+		"answers" : [	
+			"Sell or transfer your vehicle.", 
+			"", 
+			""
+		]
+	},
+	{
+		"question":"",
+		"answers" : [	
+			"", 
+			"", 
+			""
+		]
+	},
+	{
+		"question":"",
+		"answers" : [	
+			"", 
+			"", 
+			""
+		]
+	},
+	{
+		"question":"",
+		"answers" : [	
+			"", 
+			"", 
+			""
+		]
+	},
+	{
+		"question":"",
+		"answers" : [	
+			"", 
+			"", 
+			""
+		]
+	},
+	{
+		"question":"",
+		"answers" : [	
+			"", 
+			"", 
+			""
+		]
+	},
+	{
+		"question":"",
+		"answers" : [	
+			"", 
+			"", 
+			""
+		]
+	},
+	{
+		"question":"",
+		"answers" : [	
+			"", 
+			"", 
+			""
+		]
+	},
+	{
+		"question":"",
+		"answers" : [	
+			"", 
+			"", 
+			""
+		]
+	},
+	{
+		"question":"",
+		"answers" : [	
+			"", 
+			"", 
+			""
+		]
+	},
+	{
+		"question":"",
+		"answers" : [	
+			"", 
+			"", 
+			""
+		]
+	},
+	{
+		"question":"Minors may cell phones while driving ...",
 		"answers" : [
-			"correct2" , "wrong12", "wrong22"
+			"Only to contact emergency responders", 
+			"At any time", 
+			"At red lights"
 		]
 	}
 ]
