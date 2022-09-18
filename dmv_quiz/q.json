@@ -179,92 +179,228 @@
 		"question":"You must notify the DMV within 5 days if you:",
 		"answers" : [	
 			"Sell or transfer your vehicle.", 
-			"", 
-			""
+			"Fail a smog test for your vehicle.", 
+			"Get a new prescription for lenses or contacts."
 		]
 	},
 	{
-		"question":"",
+		"question":"Two sets of solid, double, yellow \nlines that are two or more feet apart:",
 		"answers" : [	
-			"", 
-			"", 
-			""
+			"May not be crossed for any reason.", 
+			"May be crossed to enter or exit a private driveway.", 
+			"Should be treated as a separate traffic lane."
 		]
 	},
 	{
-		"question":"",
+		"question":"You want to make a right turn at an \nupcoming intersection. You should slow down and:",
 		"answers" : [	
-			"", 
-			"", 
-			""
+			"Signal for 100 feet before turning.", 
+			"Move toward the left side of your lane.", 
+			"Avoid driving in the bicycle lane."
 		]
 	},
 	{
-		"question":"",
+		"question":"You are driving on a freeway posted for 65 MPH. \nThe traffic is traveling at 70 MPH. You may legally drive:",
 		"answers" : [	
-			"", 
-			"", 
-			""
+			"No faster than 65 mph.", 
+			"70 mph or faster to keep up with the speed of traffic.", 
+			"Between 65 mph and 70 mph."
 		]
 	},
 	{
-		"question":"",
+		"question":"It is illegal to park your vehicle:",
 		"answers" : [	
-			"", 
-			"", 
-			""
+			"In an unmarked crosswalk.", 
+			"Within three feet of a private driveway.", 
+			"In a bicycle lane."
 		]
 	},
 	{
-		"question":"",
+		"question":"The safest precaution that you can take \nregarding the use of cellular phones and driving is:",
 		"answers" : [	
-			"", 
-			"", 
-			""
+			"Use hands-free devices so you can keep both hands on the steering wheel.", 
+			"Keep your phone within easy reach so you won't need to take your eyes off the road.", 
+			"Review the number before answering a call."
 		]
 	},
 	{
-		"question":"",
+		"question":"If you have a green light, but traffic is blocking the intersection, you should:",
 		"answers" : [	
-			"", 
-			"", 
-			""
+			"Stay out of the intersection until traffic clears.", 
+			"Enter the intersection and wait until traffic clears.", 
+			"Merge into another lane and try to go around the traffic."
 		]
 	},
 	{
-		"question":"",
+		"question":"You are getting ready to make a right turn. You should:",
 		"answers" : [	
-			"", 
-			"", 
-			""
+			"Slow down or stop, if necessary, and then make the turn.", 
+			"Stop before entering the right lane and let all other traffic go first.", 
+			"Signal and turn immediately."
 		]
 	},
 	{
-		"question":"",
+		"question":"You must obey instructions from school crossing guards:",
 		"answers" : [	
-			"", 
-			"", 
-			""
+			"At all times.", 
+			"Only during school hours.", 
+			"Unless you do not see any children present."
 		]
 	},
 	{
-		"question":"",
+		"question":"It is a very windy day. You are driving and a dust storm blows \nacross the freeway reducing your visibility. You should drive slower and turn on your:",
 		"answers" : [	
-			"", 
-			"", 
-			""
+			"Headlights.", 
+			"Interior lights.", 
+			"Parking lights."
 		]
 	},
 	{
-		"question":"",
+		"question":"If you plan to pass another vehicle, you should:",
 		"answers" : [	
-			"", 
-			"", 
-			""
+			"Not assume the other driver will make space for you to return to your lane.", 
+			"Assume the other driver will let you pass if you use your turn signal.", 
+			"Assume the other driver will maintain a constant speed."
 		]
 	},
 	{
-		"question":"Minors may cell phones while driving ...",
+		"question":"If you drive faster than other vehicles on a road with \none lane in each direction and continually pass the other cars, you will:",
+		"answers" : [	
+			"Increase your chances of an accident.", 
+			"Get you to your destination much faster and safer.", 
+			"Help prevent traffic congestion."
+		]
+	},
+	{
+		"question":"Which of these vehicles must always stop before crossing railroad tracks?",
+		"answers" : [	
+			"Tank trucks marked with hazardous materials placards.", 
+			"Motor homes or pickup trucks towing a boat trailer.", 
+			"Any vehicle with 3 or more axles or weighing more than 4,000 pounds."
+		]
+	},
+	{
+		"question":"You are driving on a one-way street. \nYou may turn left onto another one-way street only if",
+		"answers" : [	
+			"Traffic on the street moves to the left.", 
+			"A sign permits the turn.", 
+			"Traffic on the street moves to the right."
+		]
+	},
+	{
+		"question":"A large truck is ahead of you and is turning right \nonto a street with two lanes in each direction. The truck:",
+		"answers" : [	
+			"May have to swing wide to complete the right turn.", 
+			"May complete its turn in either of the two lanes.", 
+			"Must stay in the right lane at all times while turning."
+		]
+	},
+	{
+		"question":"You may cross a double yellow line to pass another vehicle, if the yellow line next to:",
+		"answers" : [	
+			"Your side of the road is a broken line.", 
+			"The other side of the road is a solid line.", 
+			"The other side of the road is a broken line."
+		]
+	},
+	{
+		"question":"At intersections, crosswalks, and railroad crossings, you should always:",
+		"answers" : [	
+			"Look to the sides of your vehicle to see what is coming.", 
+			"Stop, listen, and proceed cautiously.", 
+			"Slowly pass vehicles that seem to be stopped for no reason."
+		]
+	},
+	{
+		"question":"You drive defensively when you:",
+		"answers" : [	
+			"Always put one car length between you and the car ahead.", 
+			"Look only at the car in front of you while driving.", 
+			"Keep your eyes moving to look for possible hazards."
+		]
+	},
+	{
+		"question":"You are driving on the freeway. \nThe vehicle in front of you is a large truck. You should drive:",
+		"answers" : [	
+			"Farther behind the truck than you would for a passenger vehicle.", 
+			"Closely behind the truck in bad weather because the driver can see farther ahead.", 
+			"No more than one car length behind the truck so the driver can see you."
+		]
+	},
+	{
+		"question":" All of the following practices are dangerous to do while driving. \nWhich of these is also illegal?",
+		"answers" : [	
+			"Listening to music through headphones that cover both ears.", 
+			"Adjusting your outside mirrors.", 
+			"Transporting an unrestrained animal inside the vehicle."
+		]
+	},
+	{
+		"question":"Always stop before you cross railroad tracks when:",
+		"answers" : [	
+			"You don't have room on the other side to completely cross the tracks.", 
+			"The railroad crossing is located in a city or town that has frequent train traffic.", 
+			"You transport two or more young children in a passenger vehicle."
+		]
+	},
+	{
+		"question":"When you tailgate other drivers (drive close to their rear bumper):",
+		"answers" : [	
+			"You can frustrate the other drivers and make them angry.", 
+			"Your actions cannot result in a traffic citation.", 
+			"You help reduce traffic congestion."
+		]
+	},
+	{
+		"question":"Should you always drive slower than other traffic?",
+		"answers" : [	
+			"No, you can block traffic when you drive too slowly.", 
+			"Yes, it is a good defensive driving technique.", 
+			"Yes, it is always safer than driving faster than other traffic."
+		]
+	},
+	{
+		"question":"You see a signal person at a road construction site ahead. \nYou should obey his or her instructions:",
+		"answers" : [	
+			"At all times.", 
+			"Only if you see orange cones on the road ahead.", 
+			"Unless they conflict with existing signs, signals, or laws."
+		]
+	},
+	{
+		"question":"When can you drive in a bike lane?",
+		"answers" : [	
+			"When you are within 200 feet of a cross street where you plan to turn right.", 
+			"During rush hour traffic if there are no bicyclists in the bike lane.", 
+			"When you want to pass a driver ahead of you who is turning right."
+		]
+	},
+	{
+		"question":"You see a flashing yellow traffic signal at an upcoming intersection. \nThe flashing yellow light means:",
+		"answers" : [	
+			"Slow down and cross the intersection carefully.", 
+			"Stop before entering the intersection as long as you can do so safely.", 
+			"Stop. Yield to all cross traffic before crossing the intersection."
+		]
+	},
+	{
+		"question":"There is no crosswalk and you see a pedestrian crossing your lane ahead. You should:",
+		"answers" : [	
+			"Stop and let him/her finish crossing the street.", 
+			"Make eye contact and then pass him/her.", 
+			"Slow down as you pass him/her."
+		]
+	},
+	{
+		"question":"A solid yellow line next to a broken yellow line means that vehicles:",
+		"answers" : [	
+			"Next to the broken line may pass.", 
+			"In both directions may pass.", 
+			"Next to the solid line may pass."
+		]
+	},
+	{
+		"question":"Minors may use cell phones while driving ...",
 		"answers" : [
 			"Only to contact emergency responders", 
 			"At any time", 

@@ -1,12 +1,7 @@
 package dmv_quiz;
 
-import java.util.Scanner;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.InputMismatchException;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Random;
+import java.util.Scanner;
 
 public class TextBased {
 	

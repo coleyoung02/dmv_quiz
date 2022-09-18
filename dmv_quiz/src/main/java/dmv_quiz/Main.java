@@ -10,9 +10,21 @@ public class Main {
 	
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		// vv Text Based vv
+		
+		/*
 		TextBased q = new TextBased();
 		q.run();
+		*/
+		
+		
+		
+		// GUI Based
+		Launcher.runLauncher();
+		
+		
+		
 	}
 
 }
