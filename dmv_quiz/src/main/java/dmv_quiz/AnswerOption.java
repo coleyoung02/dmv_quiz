@@ -13,6 +13,7 @@ public class AnswerOption {
 	private JButton button;
 	private boolean correct;
 	private boolean clicked;
+	private ActionListener myActionListener;
 	
 	public AnswerOption(String s, boolean correct) {
 		this.button = new JButton(s);
@@ -23,26 +24,7 @@ public class AnswerOption {
 		button.setMargin(new Insets(10, 30, 10, 30));
 		button.setBackground(Color.WHITE);
 		
-		if (this.correct) {
-			this.button.addActionListener(new ActionListener() {
-
-				public void actionPerformed(ActionEvent e) {
-						button.setBackground(Color.GREEN);
-						clicked = true;
-				}
-				
-			});
-		}
-		else {
-			this.button.addActionListener(new ActionListener() {
-
-				public void actionPerformed(ActionEvent e) {
-						button.setBackground(Color.RED);
-						clicked = true;
-				}
-				
-			});
-		}
+		setListener();
 		
 		
 	}
@@ -51,8 +33,44 @@ public class AnswerOption {
 		return clicked;
 	}
 	
+	public void setClicked(boolean c) {
+		clicked = c;
+	}
+	
+	public void setCorrect(boolean c) {
+		correct = c;
+		button.removeActionListener(myActionListener);
+		setListener();
+	}
+	
 	public JButton getButton() {
 		return button;
 	}
 	
+	
+	
+	private void setListener() {
+		if (this.correct) {
+			myActionListener = new ActionListener() {
+
+				public void actionPerformed(ActionEvent e) {
+						button.setBackground(Color.GREEN);
+						clicked = true;
+				}
+				
+			};
+			
+		}
+		else {
+			myActionListener = new ActionListener() {
+
+				public void actionPerformed(ActionEvent e) {
+						button.setBackground(Color.RED);
+						clicked = true;
+				}
+				
+			};
+		}
+		button.addActionListener(myActionListener);
+	}
 }
