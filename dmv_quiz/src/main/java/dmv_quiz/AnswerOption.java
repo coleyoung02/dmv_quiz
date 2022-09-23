@@ -33,6 +33,10 @@ public class AnswerOption {
 		return clicked;
 	}
 	
+	public boolean isCorrect() {
+		return correct;
+	}
+	
 	public void setClicked(boolean c) {
 		clicked = c;
 	}

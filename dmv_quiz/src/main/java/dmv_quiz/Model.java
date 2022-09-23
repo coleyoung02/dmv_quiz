@@ -33,6 +33,18 @@ public class Model {
 		return shuffled;
 	}
 	
+	public int getCorrect() {
+		return correct;
+	}
+	
+	public int getAnswered() {
+		return answered;
+	}
+	
+	public int length() {
+		return questions.length;
+	}
+	
 	public Question[] shuffledQuestions() {
 		List<Question> q = Arrays.asList(questions);
 		Collections.shuffle(q);

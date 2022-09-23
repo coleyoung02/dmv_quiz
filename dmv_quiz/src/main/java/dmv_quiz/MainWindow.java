@@ -10,8 +10,10 @@ import java.awt.Color;
 import java.awt.BorderLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
+import javax.swing.SwingConstants;
 
 public class MainWindow {
 
@@ -26,6 +28,9 @@ public class MainWindow {
 	private JPanel questionPanel;
 	private JTextArea question;
 	private JPanel buttonsPanel;
+	private JPanel results;
+	private JLabel resultsLabel;
+	private JLabel discreteResults;
 	private AnswerOption[] answerButtons;
 	
 	private Question[] shuffled;
@@ -45,10 +50,21 @@ public class MainWindow {
 		
 		questionPanel.add(question);
 		buttonsPanel = new JPanel(new GridLayout(noButtons + 1, 1, 1, 1));
-		window.add(questionPanel, BorderLayout.NORTH);
+		window.add(questionPanel, BorderLayout.CENTER);
 		window.add(buttonsPanel, BorderLayout.SOUTH);
 		answerButtons = new AnswerOption[noButtons];
 		
+		results = new JPanel();
+		resultsLabel = new JLabel("DMV Practice Quiz");
+		discreteResults = new JLabel("Welcome");
+		results.add(resultsLabel);
+		results.add(discreteResults);
+		results.setBackground(Color.GREEN);
+		discreteResults.setHorizontalAlignment(SwingConstants.LEFT);
+		discreteResults.setFont(new Font("Arial", Font.PLAIN, 22));
+		resultsLabel.setHorizontalAlignment(SwingConstants.LEFT);
+		resultsLabel.setFont(new Font("Arial", Font.PLAIN, 22));
+		window.add(results, BorderLayout.EAST);
 		
 		//would need to be adjusted to accommodate more buttons
 		AnswerOption button1 = new AnswerOption("1", false);
@@ -64,6 +80,7 @@ public class MainWindow {
 		buttonsPanel.add(nextButton());
 		
 		//model
+		index = 0;
 		quiz = new Model();
 		shuffled = quiz.shuffledQuestions();
 	}
@@ -88,6 +105,9 @@ public class MainWindow {
 		nBut.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
+				if (index > 0) {
+					updateScore();
+				}
 				nextQuestion();
 			}
 			
@@ -118,10 +138,33 @@ public class MainWindow {
 			}
 		}
 		index++;
+		if (index >= quiz.length()) {
+			endQuiz();
+		}
 	}
 	
+	//update score
+	private void updateScore() {
+		boolean correctGuessed = false;
+		for (int i = 0; i < answerButtons.length; i++) {
+			if (answerButtons[i].isClicked() && !answerButtons[i].isCorrect()) {
+				correctGuessed = false;
+				break;
+			}
+			else if (answerButtons[i].isClicked()) {
+				correctGuessed = true;
+			}
+		}
+		quiz.guess(false, correctGuessed);
+		resultsLabel.setText(Integer.toString(quiz.getPercentCorrect()) + "%");
+		discreteResults.setText(Integer.toString(quiz.getCorrect()) + "/" + Integer.toString(quiz.getAnswered()));
+	}
 	
-	
+	//called after answering or skipping final question
+	//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX NEED TO WRITE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	private void endQuiz() {
+		
+	}
 	
 	public void show() {
 		window.setVisible(true);
