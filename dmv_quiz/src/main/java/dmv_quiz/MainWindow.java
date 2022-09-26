@@ -33,6 +33,9 @@ public class MainWindow {
 	private JLabel discreteResults;
 	private AnswerOption[] answerButtons;
 	
+	private JLabel endResults;
+	private JButton restart;
+	
 	private Question[] shuffled;
 	private Model quiz;
 	private int index;
@@ -45,26 +48,33 @@ public class MainWindow {
 		window.setSize(1000,700);
 		window.setLocationRelativeTo(null);
 		
+		addGUIElements();		
+		
+		endResults = new JLabel();
+		restart = new JButton();
+		
+		//model
+		startModel();
+	}
+	//gui stuff
+	
+	private void addGUIElements() {
+		setQPanel();
+		setBPanel();
+		setRPanel();
+	}
+	
+	private void setQPanel() {
 		questionPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 30, 5));
 		question = questionText("Press next to start");
-		
 		questionPanel.add(question);
-		buttonsPanel = new JPanel(new GridLayout(noButtons + 1, 1, 1, 1));
 		window.add(questionPanel, BorderLayout.CENTER);
+	}
+	
+	private void setBPanel() {
+		buttonsPanel = new JPanel(new GridLayout(noButtons + 1, 1, 1, 1));	
 		window.add(buttonsPanel, BorderLayout.SOUTH);
 		answerButtons = new AnswerOption[noButtons];
-		
-		results = new JPanel();
-		resultsLabel = new JLabel("DMV Practice Quiz");
-		discreteResults = new JLabel("Welcome");
-		results.add(resultsLabel);
-		results.add(discreteResults);
-		results.setBackground(Color.GREEN);
-		discreteResults.setHorizontalAlignment(SwingConstants.LEFT);
-		discreteResults.setFont(new Font("Arial", Font.PLAIN, 22));
-		resultsLabel.setHorizontalAlignment(SwingConstants.LEFT);
-		resultsLabel.setFont(new Font("Arial", Font.PLAIN, 22));
-		window.add(results, BorderLayout.EAST);
 		
 		//would need to be adjusted to accommodate more buttons
 		AnswerOption button1 = new AnswerOption("1", false);
@@ -78,13 +88,22 @@ public class MainWindow {
 			buttonsPanel.add(answerButtons[i].getButton());
 		}
 		buttonsPanel.add(nextButton());
-		
-		//model
-		index = 0;
-		quiz = new Model();
-		shuffled = quiz.shuffledQuestions();
 	}
-	//gui stuff
+	
+	private void setRPanel() {
+		results = new JPanel();
+		resultsLabel = new JLabel("DMV Practice Quiz");
+		discreteResults = new JLabel("Welcome");
+		results.add(resultsLabel);
+		results.add(discreteResults);
+		results.setBackground(Color.GREEN);
+		discreteResults.setHorizontalAlignment(SwingConstants.LEFT);
+		discreteResults.setFont(new Font("Arial", Font.PLAIN, 22));
+		resultsLabel.setHorizontalAlignment(SwingConstants.LEFT);
+		resultsLabel.setFont(new Font("Arial", Font.PLAIN, 22));
+		window.add(results, BorderLayout.EAST);
+	}
+	
 	private JTextArea questionText(String q) {
 		JTextArea textArea = new JTextArea(q, 10, 30);
 		textArea.setLineWrap(true);
@@ -123,6 +142,12 @@ public class MainWindow {
 	}
 	
 	//model interaction and update gui
+	private void startModel() {
+		index = 0;
+		quiz = new Model();
+		shuffled = quiz.shuffledQuestions();
+	}
+	
 	private void nextQuestion() {
 		resetAnswerButtons();
 		question.setText(shuffled[index].getText());
@@ -161,10 +186,39 @@ public class MainWindow {
 	}
 	
 	//called after answering or skipping final question
-	//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX NEED TO WRITE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX need to add option to restart XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	private void endQuiz() {
+		window.remove(buttonsPanel);
+		window.remove(questionPanel);
+		window.remove(results);
 		
+		String endScreen = new String();
+		endScreen += "Your score was " + Integer.toString(quiz.getPercentCorrect()) + "%";
+		
+		endResults = new JLabel(endScreen);
+		
+		window.add(endResults, BorderLayout.NORTH);
+		addRButton();
 	}
+	
+	private void  addRButton() {
+		restart = new JButton("Click here to restart");
+		
+		restart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				restartQuiz();
+			}
+		});
+		window.add(restart);
+	}
+	
+	private void restartQuiz() {
+		window.remove(endResults);
+		window.remove(restart);
+		addGUIElements();
+		startModel();
+	}
+	//add option to review missed questions
 	
 	public void show() {
 		window.setVisible(true);
