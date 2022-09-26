@@ -149,6 +149,10 @@ public class MainWindow {
 	}
 	
 	private void nextQuestion() {
+		if (index >= quiz.length()) {
+			endQuiz();
+			return;
+		}
 		resetAnswerButtons();
 		question.setText(shuffled[index].getText());
 		int[] order = Model.shuffledArray(shuffled[index].getAnswers().length);
@@ -163,9 +167,7 @@ public class MainWindow {
 			}
 		}
 		index++;
-		if (index >= quiz.length()) {
-			endQuiz();
-		}
+		
 	}
 	
 	//update score
@@ -197,7 +199,7 @@ public class MainWindow {
 		
 		endResults = new JLabel(endScreen);
 		
-		window.add(endResults, BorderLayout.NORTH);
+		window.add(endResults, BorderLayout.CENTER);
 		addRButton();
 	}
 	
@@ -209,14 +211,16 @@ public class MainWindow {
 				restartQuiz();
 			}
 		});
-		window.add(restart);
+		window.add(restart, BorderLayout.SOUTH);
 	}
 	
 	private void restartQuiz() {
+		System.out.println("restart");
 		window.remove(endResults);
 		window.remove(restart);
 		addGUIElements();
 		startModel();
+		window.repaint();
 	}
 	//add option to review missed questions
 	

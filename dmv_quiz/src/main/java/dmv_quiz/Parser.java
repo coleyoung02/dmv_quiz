@@ -11,7 +11,7 @@ public class Parser {
 	private static String readFile(String filename) {
 		String returnString = "";
 		try {
-			File myObj = new File("q.json");
+			File myObj = new File(filename);
 			Scanner myReader = new Scanner(myObj);
 			while (myReader.hasNextLine()) {
 				String data = myReader.nextLine();

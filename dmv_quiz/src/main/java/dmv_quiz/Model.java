@@ -10,11 +10,14 @@ public class Model {
 	private int correct;
 	private int answered;
 	private Question[] questions;
+	
+	//change this to adjust which file questions come from
+	private static String filename = "testQ.json";
 
 	public Model() {
 		this.answered = 0;
 		this.correct = 0;
-		this.questions = Parser.parse("q.json");
+		this.questions = Parser.parse(filename);
 	}
 
 	//returns a shuffled array containing integers 0 to l
