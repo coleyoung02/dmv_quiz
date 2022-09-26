@@ -12,7 +12,7 @@ public class Model {
 	private Question[] questions;
 	
 	//change this to adjust which file questions come from
-	private static String filename = "testQ.json";
+	private static String filename = "q.json";
 
 	public Model() {
 		this.answered = 0;

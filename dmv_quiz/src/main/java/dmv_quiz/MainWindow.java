@@ -14,6 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
 
 public class MainWindow {
 
@@ -215,12 +216,11 @@ public class MainWindow {
 	}
 	
 	private void restartQuiz() {
-		System.out.println("restart");
 		window.remove(endResults);
 		window.remove(restart);
 		addGUIElements();
 		startModel();
-		window.repaint();
+		SwingUtilities.updateComponentTreeUI(window);
 	}
 	//add option to review missed questions
 	
