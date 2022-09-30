@@ -2,22 +2,36 @@ package dmv_quiz;
 
 import java.util.Random;
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
 public class Model {
 
-	private int correct;
-	private int answered;
-	private Question[] questions;
 	
 	//change this to adjust which file questions come from
 	private static String filename = "q.json";
+		
+		
+	private int correct;
+	private int answered;
+	private Question[] questions;
+	private List<Question> missed;
+	
+	
 
 	public Model() {
 		this.answered = 0;
 		this.correct = 0;
 		this.questions = Parser.parse(filename);
+		this.missed = new ArrayList<Question>();
+	}
+	
+	public Model(Model m) {
+		this.answered = 0;
+		this.correct = 0;
+		this.questions = m.missed.toArray(new Question[m.missed.size()]);
+		this.missed = new ArrayList<Question>();
 	}
 
 	//returns a shuffled array containing integers 0 to l
@@ -68,6 +82,16 @@ public class Model {
 		if (!attempted) {
 			if (isRight)
 				correct++;
+			answered++;
+		}
+	}
+	
+	public void guess(boolean attempted, boolean isRight, Question q) {
+		if (!attempted) {
+			if (isRight)
+				correct++;
+			else
+				missed.add(q);
 			answered++;
 		}
 	}

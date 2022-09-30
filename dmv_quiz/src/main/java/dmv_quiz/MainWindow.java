@@ -34,8 +34,10 @@ public class MainWindow {
 	private JLabel discreteResults;
 	private AnswerOption[] answerButtons;
 	
+	private JPanel endPanel;
 	private JLabel endResults;
 	private JButton restart;
+	private JButton review;
 	
 	private Question[] shuffled;
 	private Model quiz;
@@ -51,11 +53,13 @@ public class MainWindow {
 		
 		addGUIElements();		
 		
+		endPanel = new JPanel();
 		endResults = new JLabel();
 		restart = new JButton();
+		review = new JButton();
 		
 		//model
-		startModel();
+		startModel(false);
 	}
 	//gui stuff
 	
@@ -143,9 +147,12 @@ public class MainWindow {
 	}
 	
 	//model interaction and update gui
-	private void startModel() {
+	private void startModel(boolean review) {
 		index = 0;
-		quiz = new Model();
+		if (review)
+			quiz = new Model(quiz);
+		else
+			quiz = new Model();
 		shuffled = quiz.shuffledQuestions();
 	}
 	
@@ -183,7 +190,7 @@ public class MainWindow {
 				correctGuessed = true;
 			}
 		}
-		quiz.guess(false, correctGuessed);
+		quiz.guess(false, correctGuessed, shuffled[index - 1]);
 		resultsLabel.setText(Integer.toString(quiz.getPercentCorrect()) + "%");
 		discreteResults.setText(Integer.toString(quiz.getCorrect()) + "/" + Integer.toString(quiz.getAnswered()));
 	}
@@ -198,31 +205,49 @@ public class MainWindow {
 		String endScreen = new String();
 		endScreen += "Your score was " + Integer.toString(quiz.getPercentCorrect()) + "%";
 		
+		
+		endPanel = new JPanel(new GridLayout(2, 1, 1, 1));
+		
 		endResults = new JLabel(endScreen);
 		
 		window.add(endResults, BorderLayout.CENTER);
-		addRButton();
+		window.add(endPanel, BorderLayout.SOUTH);
+		
+		addRestartButton();
+		addReviewButton();
 	}
 	
-	private void  addRButton() {
+	private void  addRestartButton() {
 		restart = new JButton("Click here to restart");
 		
 		restart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				restartQuiz();
+				restartQuiz(false);
 			}
 		});
-		window.add(restart, BorderLayout.SOUTH);
+		endPanel.add(restart);
+	}
+	private void  addReviewButton() {
+		review = new JButton("Click to review missed questions");
+		
+		review.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				restartQuiz(true);
+			}
+		});
+		endPanel.add(review);
 	}
 	
-	private void restartQuiz() {
+	private void restartQuiz(boolean review) {
 		window.remove(endResults);
-		window.remove(restart);
+		window.remove(endPanel);
 		addGUIElements();
-		startModel();
+		if (review)
+			startModel(true);
+		else
+			startModel(false);
 		SwingUtilities.updateComponentTreeUI(window);
 	}
-	//add option to review missed questions
 	
 	public void show() {
 		window.setVisible(true);
