@@ -6,7 +6,7 @@ package dmv_quiz;
 
 public class Main {
 
-	private static boolean textBased = true;
+	private static boolean textBased = false;
 	
 	
 	
