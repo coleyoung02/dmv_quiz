@@ -249,6 +249,11 @@ public class MainWindow {
 	}
 	
 	
+	
+	//to implement: 
+	//what happens if you try to review with no missed questions?
+	//should the review button even appear if no questions are missed?
+	
 	//resets quiz state
 	//if review is true, only use questions on the Model's list of missed questions
 	private void restartQuiz(boolean review) {
