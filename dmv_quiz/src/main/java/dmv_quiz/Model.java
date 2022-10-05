@@ -27,6 +27,9 @@ public class Model {
 		this.missed = new ArrayList<Question>();
 	}
 	
+	
+	//returns a new model object with the question set derived from the missed
+	//answers stored in the passed Model object
 	public Model(Model m) {
 		this.answered = 0;
 		this.correct = 0;
@@ -34,7 +37,10 @@ public class Model {
 		this.missed = new ArrayList<Question>();
 	}
 
-	//returns a shuffled array containing integers 0 to l
+	
+	//useful in anything that has a model
+	//returns a shuffled array containing integers 0 to l <- l as in lion not #1
+	// ex. shuffledArray(3) might contain [0, 2, 1] or [2, 1, 0]
 	public static int[] shuffledArray(int l) {
 		Random r = new Random();
 		int[] shuffled = new int[l];
@@ -62,6 +68,7 @@ public class Model {
 		return questions.length;
 	}
 	
+	//returns an array of the questions in random order
 	public Question[] shuffledQuestions() {
 		List<Question> q = Arrays.asList(questions);
 		Collections.shuffle(q);
@@ -78,6 +85,12 @@ public class Model {
 			return 100*correct/answered;
 	}
 
+	
+	//text-based version
+	
+	//attempted is true if the question has already been attempted
+	//should be false for the first try and true afterwards
+	//attempted determines if the score is affected by subsequent guesses
 	public void guess(boolean attempted, boolean isRight) {
 		if (!attempted) {
 			if (isRight)
@@ -86,6 +99,10 @@ public class Model {
 		}
 	}
 	
+	
+	//i could get rid of the attempted parameter here because I am only ever 
+	//passing false but i might redesign it later so that buttons themselves call 
+	//this method. 
 	public void guess(boolean attempted, boolean isRight, Question q) {
 		if (!attempted) {
 			if (isRight)

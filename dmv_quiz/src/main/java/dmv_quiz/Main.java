@@ -6,6 +6,7 @@ package dmv_quiz;
 
 public class Main {
 
+	private static boolean textBased = true;
 	
 	
 	
@@ -13,17 +14,14 @@ public class Main {
 		
 		// vv Text Based vv
 		
-		/*
-		TextBased q = new TextBased();
-		q.run();
-		*/
-		
-		
-		
+		if (textBased) {
+			TextBased q = new TextBased();
+			q.run();
+		}
+		else {
 		// GUI Based
 		Launcher.runLauncher();
-		
-		
+		}
 		
 	}
 

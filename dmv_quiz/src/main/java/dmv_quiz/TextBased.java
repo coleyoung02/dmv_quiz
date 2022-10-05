@@ -6,35 +6,20 @@ import java.util.Scanner;
 public class TextBased {
 	
 	
+	//i should maybe add an option to quit by typing "quit" 
+	//but realistically the only way anyone is using the text version
+	//is if they are already changing code in the main file so i'm sure 
+	//anyone that can do that can end the program on their own
+	
 	private Model quiz;
 	
 	public TextBased() {
 		this.quiz = new Model();
 	}
 	
-	public static int getPositiveInt(Scanner s) {
-		int i = -1;
-		while (true) {
-			try {
-				i = s.nextInt();
-				if (i > 0)
-					return i;
-			}
-			catch (InputMismatchException e) {
-				s.nextLine();
-			}
-			System.out.println("Invalid guess, try again");
-		}
-	}
-	public static int takeGuess(Scanner s, int max) {
-		int guess = getPositiveInt(s);
-		while (guess > max) {
-			System.out.println("Invalid guess, try again");
-			guess = getPositiveInt(s);
-		}
-		return guess;
-	}
-	
+	//I know this method is really beefy and chunky and should probably be broken up
+	//but I only really intended the text based part to make sure the model is working and as im 
+	//commenting this the gui version already has more functionality
 	public void run() {
 		Question[] shuffled = quiz.shuffledQuestions();
 		boolean isCorrect = false;
@@ -67,6 +52,33 @@ public class TextBased {
 		System.out.println("Final Score: " + quiz.getPercentCorrect() + "%");
 		s.close();
 	}
+	
+	
+	
+	private static int getPositiveInt(Scanner s) {
+		int i = -1;
+		while (true) {
+			try {
+				i = s.nextInt();
+				if (i > 0)
+					return i;
+			}
+			catch (InputMismatchException e) {
+				s.nextLine();
+			}
+			System.out.println("Invalid guess, try again");
+		}
+	}
+	private static int takeGuess(Scanner s, int max) {
+		int guess = getPositiveInt(s);
+		while (guess > max) {
+			System.out.println("Invalid guess, try again");
+			guess = getPositiveInt(s);
+		}
+		return guess;
+	}
+	
+	
 	
 	
 }

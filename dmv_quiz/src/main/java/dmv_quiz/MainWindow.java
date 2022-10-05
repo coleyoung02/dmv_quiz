@@ -61,6 +61,10 @@ public class MainWindow {
 		//model
 		startModel(false);
 	}
+	
+	public void show() {
+		window.setVisible(true);
+	}
 	//gui stuff
 	
 	private void addGUIElements() {
@@ -69,6 +73,7 @@ public class MainWindow {
 		setRPanel();
 	}
 	
+	//sets panel to display questions
 	private void setQPanel() {
 		questionPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 30, 5));
 		question = questionText("Press next to start");
@@ -76,6 +81,7 @@ public class MainWindow {
 		window.add(questionPanel, BorderLayout.CENTER);
 	}
 	
+	//sets panel with answer and next buttons
 	private void setBPanel() {
 		buttonsPanel = new JPanel(new GridLayout(noButtons + 1, 1, 1, 1));	
 		window.add(buttonsPanel, BorderLayout.SOUTH);
@@ -95,6 +101,7 @@ public class MainWindow {
 		buttonsPanel.add(nextButton());
 	}
 	
+	//sets panel to display results
 	private void setRPanel() {
 		results = new JPanel();
 		resultsLabel = new JLabel("DMV Practice Quiz");
@@ -119,6 +126,9 @@ public class MainWindow {
 		return textArea;
 	}
 	
+	
+	//created in this class because it makes it easiest to interact with MainWindow
+	//methods in the relevant object
 	private JButton nextButton() {
 		JButton nBut = new JButton("Next");
 		nBut.setFont(new Font("Arial", Font.PLAIN, 22));
@@ -178,7 +188,7 @@ public class MainWindow {
 		
 	}
 	
-	//update score
+	//update score when next button is clicked
 	private void updateScore() {
 		boolean correctGuessed = false;
 		for (int i = 0; i < answerButtons.length; i++) {
@@ -196,7 +206,6 @@ public class MainWindow {
 	}
 	
 	//called after answering or skipping final question
-	//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX need to add option to restart XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	private void endQuiz() {
 		window.remove(buttonsPanel);
 		window.remove(questionPanel);
@@ -217,6 +226,7 @@ public class MainWindow {
 		addReviewButton();
 	}
 	
+	// both of these buttons also interact with MainWindow directly
 	private void  addRestartButton() {
 		restart = new JButton("Click here to restart");
 		
@@ -238,6 +248,9 @@ public class MainWindow {
 		endPanel.add(review);
 	}
 	
+	
+	//resets quiz state
+	//if review is true, only use questions on the Model's list of missed questions
 	private void restartQuiz(boolean review) {
 		window.remove(endResults);
 		window.remove(endPanel);
@@ -249,7 +262,5 @@ public class MainWindow {
 		SwingUtilities.updateComponentTreeUI(window);
 	}
 	
-	public void show() {
-		window.setVisible(true);
-	}
+	
 }

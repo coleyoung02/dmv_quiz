@@ -8,6 +8,38 @@ import org.json.*;
 
 public class Parser {
 	
+	/* json files should be of the format 
+		[
+			{
+				"question":questionText,
+				"answers": [	
+					correctAnswer, 
+					falseAnswer, 
+					falseAnswer
+				]
+			},
+			{
+				"question":questionText,
+				"answers": [	
+					correctAnswer, 
+					falseAnswer, 
+					falseAnswer
+				]
+			}
+		]
+	 */
+	
+	
+	//returns and array of question objects from the json filename
+	public static Question[] parse(String filename) {
+		JSONArray arr = new JSONArray(readFile(filename));
+		Question[] qArr = new Question[arr.length()];
+		for (int i = 0; i < arr.length(); i++) {
+			qArr[i] = makeQuestion(arr.getJSONObject(i));
+		}
+		return qArr;
+	}
+	
 	private static String readFile(String filename) {
 		String returnString = "";
 		try {
@@ -25,7 +57,7 @@ public class Parser {
 		return returnString;
 	}
 	
-	public static Question makeQuestion(JSONObject j) {
+	private static Question makeQuestion(JSONObject j) {
 		
 		
 		JSONArray answerArr = j.getJSONArray("answers");
@@ -40,12 +72,5 @@ public class Parser {
 		return q;
 	}
 	
-	public static Question[] parse(String filename) {
-		JSONArray arr = new JSONArray(readFile(filename));
-		Question[] qArr = new Question[arr.length()];
-		for (int i = 0; i < arr.length(); i++) {
-			qArr[i] = makeQuestion(arr.getJSONObject(i));
-		}
-		return qArr;
-	}
+	
 }
