@@ -24,7 +24,7 @@
 		]
 	},
 	{
-		"question":"You are approaching a railroad crossing with no warning devices and are unable \nto see 400 feet down the tracks in one direction. The speed limit is:",
+		"question":"You are approaching a railroad crossing with no warning devices and are unable to see 400 feet down the tracks in one direction. The speed limit is:",
 		"answers": [	
 			"15 mph", 
 			"20 mph", 
@@ -64,7 +64,7 @@
 		]
 	},
 	{
-		"question":"A school bus ahead of you in your lane is \nstopped with red lights flashing. You should:",
+		"question":"A school bus ahead of you in your lane is stopped with red lights flashing. You should:",
 		"answers": [	
 			"Stop as long as the red lights are flashing", 
 			"Stop, then proceed when you think all of the children have exited the bus", 
@@ -88,7 +88,7 @@
 		]
 	},
 	{
-		"question":"To avoid last minute moves, you should be looking down \nthe road to where your vehicle will be in about ______________.",
+		"question":"To avoid last minute moves, you should be looking down the road to where your vehicle will be in about ______________.",
 		"answers": [	
 			"10 to 15 seconds", 
 			"5 to 10 seconds", 
@@ -96,7 +96,7 @@
 		]
 	},
 	{
-		"question":"You are about to make a left turn. You must signal \ncontinuously during the last ____ feet before the turn.",
+		"question":"You are about to make a left turn. You must signal continuously during the last ____ feet before the turn.",
 		"answers": [	
 			"100", 
 			"75", 
@@ -112,7 +112,7 @@
 		]
 	},
 	{
-		"question":"You have been involved in a minor traffic collision \nwith a parked vehicle and you can't find the owner. You must:",
+		"question":"You have been involved in a minor traffic collision with a parked vehicle and you can't find the owner. You must:",
 		"answers": [	
 			"Both of the above.", 
 			"Leave a note on the vehicle.", 
@@ -152,7 +152,7 @@
 		]
 	},
 	{
-		"question":"To turn left from a multilane one-way street onto \na one-way street, you should start your turn from:",
+		"question":"To turn left from a multilane one-way street onto a one-way street, you should start your turn from:",
 		"answers": [	
 			"The lane closest to the left curb.", 
 			"Any lane (as long as it is safe).", 
@@ -160,7 +160,7 @@
 		]
 	},
 	{
-		"question":"If you are involved in a traffic collision, you are \nrequired to complete and submit a written report (SR1) to the DMV:",
+		"question":"If you are involved in a traffic collision, you are required to complete and submit a written report (SR1) to the DMV:",
 		"answers": [	
 			"If there is property damage in excess of $1,000 or if there are any injuries.", 
 			"Only if you or the other driver is injured.", 
@@ -192,7 +192,7 @@
 		]
 	},
 	{
-		"question":"Two sets of solid, double, yellow \nlines that are two or more feet apart:",
+		"question":"Two sets of solid, double, yellow lines that are two or more feet apart:",
 		"answers": [	
 			"May not be crossed for any reason.", 
 			"May be crossed to enter or exit a private driveway.", 
@@ -200,7 +200,7 @@
 		]
 	},
 	{
-		"question":"You want to make a right turn at an \nupcoming intersection. You should slow down and:",
+		"question":"You want to make a right turn at an upcoming intersection. You should slow down and:",
 		"answers": [	
 			"Signal for 100 feet before turning.", 
 			"Move toward the left side of your lane.", 
@@ -208,7 +208,7 @@
 		]
 	},
 	{
-		"question":"You are driving on a freeway posted for 65 MPH. \nThe traffic is traveling at 70 MPH. You may legally drive:",
+		"question":"You are driving on a freeway posted for 65 MPH. The traffic is traveling at 70 MPH. You may legally drive:",
 		"answers": [	
 			"No faster than 65 mph.", 
 			"70 mph or faster to keep up with the speed of traffic.", 
@@ -224,7 +224,7 @@
 		]
 	},
 	{
-		"question":"The safest precaution that you can take \nregarding the use of cellular phones and driving is:",
+		"question":"The safest precaution that you can take regarding the use of cellular phones and driving is:",
 		"answers": [	
 			"Use hands-free devices so you can keep both hands on the steering wheel.", 
 			"Keep your phone within easy reach so you won't need to take your eyes off the road.", 
@@ -256,7 +256,7 @@
 		]
 	},
 	{
-		"question":"It is a very windy day. You are driving and a dust storm blows \nacross the freeway reducing your visibility. You should drive slower and turn on your:",
+		"question":"It is a very windy day. You are driving and a dust storm blows across the freeway reducing your visibility. You should drive slower and turn on your:",
 		"answers": [	
 			"Headlights.", 
 			"Interior lights.", 
@@ -272,7 +272,7 @@
 		]
 	},
 	{
-		"question":"If you drive faster than other vehicles on a road with \none lane in each direction and continually pass the other cars, you will:",
+		"question":"If you drive faster than other vehicles on a road with one lane in each direction and continually pass the other cars, you will:",
 		"answers": [	
 			"Increase your chances of an accident.", 
 			"Get you to your destination much faster and safer.", 
@@ -288,7 +288,7 @@
 		]
 	},
 	{
-		"question":"You are driving on a one-way street. \nYou may turn left onto another one-way street only if",
+		"question":"You are driving on a one-way street. You may turn left onto another one-way street only if",
 		"answers": [	
 			"Traffic on the street moves to the left.", 
 			"A sign permits the turn.", 
@@ -296,7 +296,7 @@
 		]
 	},
 	{
-		"question":"A large truck is ahead of you and is turning right \nonto a street with two lanes in each direction. The truck:",
+		"question":"A large truck is ahead of you and is turning right onto a street with two lanes in each direction. The truck:",
 		"answers": [	
 			"May have to swing wide to complete the right turn.", 
 			"May complete its turn in either of the two lanes.", 
@@ -328,7 +328,7 @@
 		]
 	},
 	{
-		"question":"You are driving on the freeway. \nThe vehicle in front of you is a large truck. You should drive:",
+		"question":"You are driving on the freeway. The vehicle in front of you is a large truck. You should drive:",
 		"answers": [	
 			"Farther behind the truck than you would for a passenger vehicle.", 
 			"Closely behind the truck in bad weather because the driver can see farther ahead.", 
@@ -336,7 +336,7 @@
 		]
 	},
 	{
-		"question":"All of the following practices are dangerous to do while driving. \nWhich of these is also illegal?",
+		"question":"All of the following practices are dangerous to do while driving. Which of these is also illegal?",
 		"answers": [	
 			"Listening to music through headphones that cover both ears.", 
 			"Adjusting your outside mirrors.", 
@@ -368,7 +368,7 @@
 		]
 	},
 	{
-		"question":"You see a signal person at a road construction site ahead. \nYou should obey his or her instructions:",
+		"question":"You see a signal person at a road construction site ahead. You should obey his or her instructions:",
 		"answers": [	
 			"At all times.", 
 			"Only if you see orange cones on the road ahead.", 
@@ -384,7 +384,7 @@
 		]
 	},
 	{
-		"question":"You see a flashing yellow traffic signal at an upcoming intersection. \nThe flashing yellow light means:",
+		"question":"You see a flashing yellow traffic signal at an upcoming intersection. The flashing yellow light means:",
 		"answers": [	
 			"Slow down and cross the intersection carefully.", 
 			"Stop before entering the intersection as long as you can do so safely.", 

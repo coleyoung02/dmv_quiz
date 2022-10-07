@@ -76,7 +76,7 @@ public class MainWindow {
 	//sets panel to display questions
 	private void setQPanel() {
 		questionPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 30, 5));
-		question = questionText("Press next to start");
+		question = questionText("Press \"Next\" to start");
 		questionPanel.add(question);
 		window.add(questionPanel, BorderLayout.CENTER);
 	}
@@ -105,10 +105,10 @@ public class MainWindow {
 	private void setRPanel() {
 		results = new JPanel();
 		resultsLabel = new JLabel("DMV Practice Quiz");
-		discreteResults = new JLabel("Welcome");
+		discreteResults = new JLabel("");
 		results.add(resultsLabel);
 		results.add(discreteResults);
-		results.setBackground(Color.GREEN);
+		results.setBackground(Color.LIGHT_GRAY);
 		discreteResults.setHorizontalAlignment(SwingConstants.LEFT);
 		discreteResults.setFont(new Font("Arial", Font.PLAIN, 22));
 		resultsLabel.setHorizontalAlignment(SwingConstants.LEFT);

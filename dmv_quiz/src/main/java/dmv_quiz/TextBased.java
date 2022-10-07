@@ -11,6 +11,8 @@ public class TextBased {
 	//is if they are already changing code in the main file so i'm sure 
 	//anyone that can do that can end the program on their own
 	
+	
+	//I need to rework this to add in its own line breaks now
 	private Model quiz;
 	
 	public TextBased() {
